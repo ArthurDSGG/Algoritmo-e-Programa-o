@@ -1,0 +1,75 @@
+For em Python
+
+numero = 0
+
+#programa
+numero = int(input("Informe o número: "))
+
+for contador in range(1,11,1):
+    print(f"{numero} X {contador} = {numero * contador}")
+
+================================
+
+#variaveis
+idade = 0
+contador = 0
+n = 0
+idade_soma = 0
+idade_maior = 0
+idade_menor = 0
+idade_media = 0.0
+
+#programa
+n = int(input("Qual o número de pessoas? "))
+
+for contador in range(0,n,1):
+    idade = int(input(f"Informe a idade da pessoa: "))
+    
+    if(contador == 1):
+        idade_maior = idade
+        idade_menor = idade
+    else:
+        if(idade > idade_maior):
+            idade_maior = idade
+      
+        if(idade < idade_menor):
+            idade_menor = idade
+    
+    idade_soma += idade
+    
+idade_media = idade_soma / n
+
+print(f"A idade média é: {idade_media:.2f}")
+print(f"A menor idade é: {idade_menor}")
+print(f"A maior idade é: {idade_maior}")
+
+=========================================
+
+#variaveis
+idade = 0
+sexo = ""
+idade_media = 0.0
+qtd_mulheres = 0
+qtd_maiores = 0
+soma_idades = 0	
+
+#programa
+for contador in range(0,20,1):
+    idade = int(input("Digite a idade: "))
+    sexo = input("Digite o sexo (M ou F): ")
+    
+    if(sexo.upper() == "F"):
+        qtd_mulheres += 1
+    
+    if (idade >= 18):
+        qtd_maiores += 1
+    
+    soma_idades += idade
+
+
+idade_media = soma_idades / 20
+
+print("A turma está lotada.")
+print (f"A média de idade dos inscritos é de: {idade_media}")
+print (f"A quantidade de mulheres inscritas é: {qtd_mulheres}")
+print (f"A quantidade de alunos maiores de idade é: {qtd_maiores}")

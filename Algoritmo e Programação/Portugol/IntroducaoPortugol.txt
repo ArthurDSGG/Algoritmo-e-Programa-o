@@ -1,0 +1,81 @@
+Introdução a Portugol
+
+algoritmo "Calculo área trapézio"
+var
+   base_menor, base_maior, altura, area:real
+
+inicio
+   escreva("Digite o Valor da base menor: ")
+   leia(base_menor)
+   escreva("Digite o Valor da base maior: ")
+   leia(base_maior)
+   escreva("Digite o Valor da altura: ")
+   leia(altura)
+
+   area <- ((base_maior + base_menor) * altura)/2
+   
+   escreval("A área é: ", area)
+
+fimalgoritmo
+
+=-=-=-=--=-=-=-==-===-=-=-=-=
+
+algoritmo "Calculo_salario_vendas"
+var
+   sal, sal_f, vendas, comissao:real
+
+inicio
+   escreva("Digite o Salário do Funcionário: ")
+   leia(sal)
+   escreva("Digite o Valor total das vendas do funcionário: ")
+   leia(vendas)
+   
+   
+   comissao <- vendas * 0.04
+   sal_f <- sal + comissao
+   
+   escreval("A comissão é: R$", comissao)
+   escreval("O salário final é: R$", sal_f)
+
+fimalgoritmo
+
+=-=--=----=-=-=-=-=-=-=-=-=--=-=
+
+algoritmo "Calculo numero salario"
+var
+   sal_minimo, sal_trabalhador, n_sal_minimo:real
+
+inicio
+   escreva("Digite o Valor do salário mínimo: ")
+   leia(sal_minimo)
+   escreva("Digite o Valor do salário do trabalhador: ")
+   leia(sal_trabalhador)
+
+   n_sal_minimo <- sal_trabalhador / sal_minimo
+   
+   escreval("O número de salários mínimos que esse trabalhador recebe é: ", n_sal_minimo)
+
+fimalgoritmo
+
+=-=-=-=-=---=-=-=-=-=-=-=-=-=-=-=-=
+
+algoritmo "Calculo do saldo na conta bancaria"
+
+var
+   salario, cheque1, cheque2, imposto, saldo_final: real
+
+inicio
+   escreva("Digite o valor do salário depositado na conta: ")
+   leia(salario)
+   escreva("Digite o valor do primeiro cheque emitido: ")
+   leia(cheque1)
+   escreva("Digite o valor do segundo cheque emitido: ")
+   leia(cheque2)
+   
+   imposto <- (cheque1 + cheque2) * (0.38 / 100)
+
+   saldo_final <- salario - cheque1 - cheque2 - imposto
+   
+   escreval("O Saldo atual do trabalhador é: ", saldo_final)
+
+fimalgoritmo

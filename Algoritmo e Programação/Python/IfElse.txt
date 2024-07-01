@@ -1,0 +1,171 @@
+IfElse em Python
+
+#variaveis
+nome = ""
+siatuacao = ""
+nota1=0.0 
+nota2=0.0 
+media=0.0
+
+#programa
+nome = input("Informe o nome do aluno: ")
+nota1 = float(input("Informe a nota 1: "))
+nota2 = float(input("Informe a nota 2: "))
+
+media = (nota1 + nota2) / 2
+
+if(media >= 6):
+    situacao = "Aprovado"
+else:
+    if(media >= 4) and (media < 6):
+        situacao = "Recuperação"
+    else:
+        situacao = "Reprovado"
+
+print(f"{nome}, a sua média é: {media:,.2f} e você está {situacao}")
+
+==================================
+
+#variaveis
+tc = ""
+ct = 0
+valor_litro = 0.0
+valor_tanque = 0.0
+
+#programa
+tc = input("Digite o tipo de carro: G - Gasolina | A - Álcool: ")
+ct = int(input("Digite a capacidade do tanque do carro: "))
+
+if(tc == "A"):
+    print(f"Você escolheu um veículo Gasolina!!!")
+else:
+    print(f"Você escolheu um veículo Álcool!!!")
+
+valor_litro = float(input("Informe o valor do litro: "))
+
+valor_tanque = ct * valor_litro
+
+print(f"O valor gasto para encher o tanque será: R${valor_tanque:,.2f}")
+
+=====================================
+
+#variaveis
+agua = 0
+
+#programa
+agua = int(input("Digite a quantidade de pontos de água encontrado: "))
+
+if(agua <= 10):
+    print(f"O solo é rochoso!!!")
+else:
+    if((agua > 10) and (agua <= 40)):
+        print(f"O solo é firme!!!")
+    else:
+        if((agua > 40) and (agua <=80)):
+            print(f"O solo é pantanoso!!!")
+        else:
+            print(f"Quantidade de água inválida!!!")
+
+=======================================
+
+#variaveis
+nome_nadador = ""
+categoria = ""
+idade_nadador = 0
+
+#programa
+nome_nadador = input("Digite o nome do nadador: ")
+idade_nadador = int(input("Digite a idade do nadador: "))
+
+if((idade_nadador >= 5) and (idade_nadador <= 7)):
+        categoria = "A categoria do Nadador é: Infantil A"
+else:
+    if((idade_nadador >= 8) and (idade_nadador <= 11)):
+        categoria = "A categoria do Nadador é: Infantil B"
+    else:
+        if((idade_nadador >= 12) and (idade_nadador <= 13)):
+            categoria = "A categoria do Nadador é: Juvenil A"
+        else:
+            if((idade_nadador >= 14) and (idade_nadador <= 17)):
+                categoria = "A categoria do Nadador é: Juvenil B"
+            else:
+                if(idade_nadador >= 18):
+                    categoria = "A categoria do Nadador é: Adulto"
+                else:
+                    categoria = "O Nadador não possui uma Categoria Válida para a sua idade"
+
+print(f"O nome do nadador é: {nome_nadador}")
+print(f"A idade do nadador é: {idade_nadador}")
+print(categoria)
+
+============================================
+
+#variaveis
+sal = 0.0
+novosal = 0.0
+boni = 0.0
+aux = 0.0
+
+#programa
+sal = float(input("Digite o salário do funcionário: "))
+
+if(sal<=500):
+    boni=sal*(5/100)
+else:
+    if((sal>500) and (sal<=1200)):
+        boni=sal*(12/100)
+    else:
+        boni=0
+
+if(sal<=600):
+    aux=150
+else:
+    aux=100
+
+novosal=sal+boni+aux
+
+print(f"O valor do novo salário é:R${novosal:,.2f}")
+
+============================================
+
+sal_min = 0.0
+sal_liquido = 0.0
+irrf = 0.0
+gratificacao = 0.0
+v_hora_trab = 0.0
+v_dependente = 0.0
+v_hora_extra = 0.0
+sal_bruto = 0.0
+n_dependente = 0
+n_horas_trab = 0
+n_hora_extra = 0
+
+#programa
+sal_min = float(input("Digite o salário mínimo: "))
+n_horas_trab = int(input("Digite o número de horas trabalhadas: "))
+n_dependente = int(input("Digite o número de dependentes: "))
+n_hora_extra = int(input("Digite o número de horas extras trabalhadas: "))
+
+v_hora_trab = 1 / 5 * sal_min
+v_dependente = n_dependente * 32
+v_hora_extra = n_hora_extra * (v_hora_trab * 1.50)
+sal_bruto = (v_hora_trab * n_horas_trab) + v_dependente + v_hora_extra
+
+if(sal_bruto < 200.00):
+    irrf = 0.0
+else:
+    if((sal_bruto >= 200.00) and (sal_bruto <= 500.00)):
+        irrf = sal_bruto * 10/100
+    else:
+        irrf = sal_bruto * 20/100
+
+sal_liquido = sal_bruto - irrf
+
+if(sal_liquido <= 350.00):
+    gratificacao = 100.00
+else:
+    gratificacao = 50.00
+
+sal_liquido = sal_liquido + gratificacao
+
+print(f"Salario a receber: R${sal_liquido:,.2f}")

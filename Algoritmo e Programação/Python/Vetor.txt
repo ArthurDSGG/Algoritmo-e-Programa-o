@@ -1,0 +1,119 @@
+Vetor em Python
+
+#variaveis
+#cont = 0
+vet=[0]*5
+
+#algoritmo
+for cont in range(0,5,1):
+   vet[cont] = int(input(f"Informe o número da posição {cont}: "))
+
+print("=====Mostrando o Vetor=====")
+for cont in range(0,5):
+   print(f"{vet[cont]} ", end=' ')
+
+===================================
+
+#variaveis
+vet=[0]*6
+
+
+#algoritmo
+for cont in range(6):
+   vet[cont] = int(input(f"Informe o número da posição {cont}: "))
+
+for cont in range(6):
+    if vet[cont] < 0:
+        print (vet[cont] * -1)
+    elif vet[cont] > 10:
+        num2 = int(input('Digite outro valor: '))
+        print (vet[cont] - num2)
+    else:
+        print (vet[cont]/5.0)
+
+===================================
+
+vet = [0]*5
+i = 0
+
+for i in range(0,5,1):
+    vet[i] = int(input('Digite um valor: '))
+
+print ("Antes da troca:", vet)
+
+for i in range(5):
+    if vet[i] >= 0:
+        vet[i] = 1
+    else:
+        vet[i] = 0
+
+print ("Após troca:" , vet)
+
+===================================
+
+#variaveis
+vet1=[0.0]*50
+vet2=[0.0]*50
+
+#algoritmo
+for cont in range(0,50,1):
+   vet1[cont] = int(input(f"Informe o número da posição {cont}: "))
+   if(cont % 2 == 0):
+      vet2[cont] = vet1[cont] * 1.02
+   else:
+      vet2[cont] = vet1[cont] * 1.05
+
+print("=====Mostrando o Vetor original=====")
+for cont in range(0,50,1):
+   print(f"{vet1[cont]:.2f} ", end=' ')
+
+print()
+print("=====Mostrando o Vetor resposta=====")
+for cont in range(0,50,1):
+   print(f"{vet2[cont]:.2f} ", end=' ')
+
+================================
+
+#variaveis
+vet1=[0.0]*50
+vet2=[0.0]*50
+
+#algoritmo
+for cont in range(0,50,1):
+   vet1[cont] = int(input(f"Informe o número da posição {cont}: "))
+   if(cont % 2 == 0):
+      vet2[cont] = vet1[cont] * 1.02
+   else:
+      vet2[cont] = vet1[cont] * 1.05
+
+print("=====Mostrando o Vetor original=====")
+for cont in range(0,50,1):
+   print(f"{vet1[cont]:.2f} ", end=' ')
+
+print()
+print("=====Mostrando o Vetor resposta=====")
+for cont in range(0,50,1):
+   print(f"{vet2[cont]:.2f} ", end=' ')
+
+======================================
+
+def troca(vet):
+    for i in range(30):
+        if vet[i] >= 0:
+            vet[i] = 1
+        else:
+            vet[i] = 0
+    return vet
+
+vet = [0]*30
+for i in range(30):
+    vet[i] = int(input('Digite um valor: '))
+
+print (vet)
+
+troca(vet)
+
+print (vet)
+
+
+

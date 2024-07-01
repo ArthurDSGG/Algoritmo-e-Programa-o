@@ -1,0 +1,93 @@
+Função em Python
+
+#variaveis
+
+#funcao
+def mostrar_mensagem():
+    print("Trabalhando com função")
+
+
+#algoritmo principal
+mostrar_mensagem()
+
+=======================
+
+def num_cascate1(n):
+    for x in range(1,n+1):
+        print(end ='\n')
+        for y in range(1,n+1):
+            if x >= y:
+                print(x, end ='')
+    print(end ='\n')
+
+
+num_cascate1(5)
+
+=====================
+
+def soma_mult(a,b,c):
+    return a+b+c,a*b*c
+
+soma, mult = soma_mult(10,10,10)
+
+print(soma)
+print(mult)
+
+======================
+
+def cont_digitos(x):
+    return len(str(x))
+
+
+result = cont_digitos("IFSP Votuporanga")
+print(f"Quantidade de letras: {result}")
+
+=======================
+
+lista = [1,2,3,3,3,3,3,4,5,100,150,30]  
+
+def media(lista):
+    sum = 0
+    for i in range(0,len(lista)):
+        sum += lista[i]
+    return sum/len(lista)
+
+def near(lista, media): 
+    distancia = max(lista) # pega o maior valor da lista
+    print(f"Valor max: {distancia}")
+    for idx in range(len(lista)):
+        if abs(lista[idx]-media) < distancia:
+            valor = lista[idx]
+            distancia = abs(lista[idx]-media)    #abs(pega o valor absoluto, ou seja, o módulo)
+    return valor
+
+
+print(f'Valor da média:{media(lista)}')
+print(f'Valor mais próximo à media: {near(lista, media(lista))}')
+
+==========================
+
+def valorPagamento():
+    diario = [] # quando não há tamanho definido, estamos criando uma lista ao invés de vetor
+
+    while True:
+        val = float(input('Valor da prestação: '))
+        atr = int(input('Dias atrasados: '))
+        if atr > 0:
+            multa = 0.03
+            multa_dia = 0.001 * atr           
+            total = float(val+(val*multa_dia)+(val*multa))
+        else:
+            total = val
+
+        print(f'O valor a ser pago é R${total}.')
+        diario.append(total) # Adiciona na lista o valor pago para depois imprimi-lo
+
+        continuar = input('Cotinuar? S/N: ').upper()
+        if continuar == 'N':
+            break
+        
+    print(f'As prestações pagas de hoje foram {diario}')
+    print('Encerrado')
+
+valorPagamento()

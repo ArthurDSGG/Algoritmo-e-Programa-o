@@ -1,0 +1,121 @@
+Introdução a Python
+
+#variaveis
+sal=0.0 
+sal_f=0.0 
+desc=0.0
+#sal, sal_f, desc = 0.0,0.0,0.0
+
+#programa
+sal = float(input("Informe o salário do funcionário: "))
+
+desc = sal * (10/100)
+
+sal_f = sal + 50 - desc
+
+print(f"O salário final é: R$ {sal_f}")
+
+==========================================
+
+#variaveis
+pes=0.0 
+polegadas=0.0 
+jardas=0.0
+milhas=0.0
+
+#programa
+pes = float(input("Informe o número de pés: "))
+
+polegadas = pes * 12
+jardas = pes / 3
+milhas = jardas / 1760
+
+print(f"O número de pés é: {pes}")
+print(f"O número de polegadas é: {polegadas}")
+print(f"O número de jardas é: {jardas:,.2f}")
+print(f"O número de minhas é: {milhas:,.5f}")
+
+=============================================
+
+#variaveis
+preco_fabrica = 0.0
+percentual_lucro_distribuidor = 0.0
+percentual_imposto = 0.0
+valor_lucro_distribuidor = 0.0
+valor_imposto = 0.0
+preco_final = 0.0
+
+#programa
+preco_fabrica = float(input("Digite o preço de fábrica do veículo: "))
+percentual_lucro_distribuidor = float(input("Digite a porcentagem de lucro do distribuidor: "))
+percentual_imposto = float(input("Digite a porcentagem de imposto: "))
+
+valor_lucro_distribuidor = preco_fabrica * (percentual_lucro_distribuidor / 100)
+valor_imposto = preco_fabrica * (percentual_imposto / 100)
+preco_final = preco_fabrica + valor_lucro_distribuidor + valor_imposto
+
+print(f"O valor do lucro do distribuidor : R${valor_lucro_distribuidor:,.2f}")
+print(f"O valor do imposto é: R${valor_imposto:,.2f}")
+print(f"O valor final do veículo é: R${preco_final:,.2f}")
+
+===============================================
+
+km_litro = 0.0
+litros_utilizados = 0.0
+distancia = 0.0
+velocidade = 0.0
+tempo = 0.0
+
+#programa
+velocidade = float(input("Informe a velocidade média: "))
+tempo = float(input("Informe o tempo gasto na viagem (em horas): "))
+km_litro = float(input("Informe quantos Km/Litro o carro faz: "))
+
+distancia = tempo * velocidade
+litros_utilizados = distancia / km_litro
+
+print(f"A velocidade média foi: {velocidade}")
+print(f"O tempo gasto na viagem foi de: {tempo}")
+print(f"A distância percorrida foi: {distancia}")
+print(f"A quantidade de litros utilizado foi: {litros_utilizados} litros")
+
+=================================================
+
+#variaveis
+qtd_item1 = 0
+qtd_item2 = 0
+qtd_item3 = 0
+total_litros = 0.0
+
+#programa
+qtd_item1 = int(input("Informe a quantidade comprada de latas de 350 ml: "))
+qtd_item2 = int(input("Informe a quantidade comprada de garrafas de 600 ml: "))
+qtd_item3 = int(input("Informe a quantidade comprada de garrafas de 2 litros: "))
+
+total_litros = (qtd_item1 * (350/1000)) + (qtd_item2 * (600/1000)) + (qtd_item3 * 2)
+
+print(f"O total de litros comprado foi: {total_litros} litros")
+
+==================================================
+
+#variaveis
+qtd_caseirinho = 0
+qtd_broinha = 0
+valor_caseirinho = 0.0
+valor_broinha = 0.0
+valor_geral = 0.0
+valor_poupanca = 0.0
+
+#programa
+qtd_caseirinho = int(input("Informe a quantidade comprada de Caseirinho: "))
+qtd_broinha = int(input("Informe a quantidade comprada de Broinhas: "))
+
+valor_caseirinho = qtd_caseirinho * 0.10
+valor_broinha = qtd_broinha * 1.60
+valor_geral = valor_caseirinho + valor_broinha
+valor_poupanca = valor_geral * 10 / 100
+
+print(f"O Valor total de Caseirinho vendido foi: R${valor_caseirinho:,.2f}")
+print(f"O Valor total de Broinha vendido foi: R${valor_broinha:,.2f}")
+print(f"O Valor Geral vendido foi: R${valor_geral:,.2f}")
+print(f"O Valor que deverá se guardado na poupança é: R${valor_poupanca:,.2f}")

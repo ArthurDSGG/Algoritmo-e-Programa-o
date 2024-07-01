@@ -1,0 +1,153 @@
+Função em Portugol
+
+algoritmo "funcao"
+var
+   num, res:inteiro
+
+funcao mostra(numPar :inteiro): inteiro
+var
+    result:inteiro
+inicio
+    result <- numPar+2
+    retorne result
+fimfuncao
+
+inicio         
+   /////////////////////////////////////
+   escreva ("Informe um número:")
+   leia(num)
+   escreval("Chamando a função mostra!!!")
+   res <- mostra(num)
+   escreval("O valor retornado pela função é: ",res)
+fimalgoritmo
+
+================================
+
+algoritmo "funcao"
+
+var
+   numero1, numero2: inteiro
+   operacao:literal
+
+funcao calcular(n1, n2:inteiro; op:literal): real
+var
+  result:real
+
+inicio
+  escolha (op)
+      caso "+"
+          result <- n1 + n2
+      caso "-"
+          result <- n1 - n2
+      caso "*"
+          result <- n1 * n2
+      caso "/"
+          result <- n1 / n2
+      outrocaso
+          result <- -1
+   fimescolha
+   retorne result
+fimfuncao
+////////////////////////////////////
+
+inicio    
+   escreval("Informe o primeiro número: ")
+   leia(numero1)
+   escreval("Informe o segundo número: ")
+   leia(numero2)
+   escreval("Informe a operação desejada: ")
+   escreval("(+) Adição")
+   escreval("(-) Subtração")
+   escreval("(*) Multiplicação")
+   escreval("(/) Divisão")
+   leia(operacao)
+
+   escreval("O resultado é: ", calcular(numero1, numero2, operacao))
+
+fimalgoritmo
+
+======================================
+
+algoritmo "funcao"
+
+var
+   numero, maior, menor, cont:inteiro
+inicio
+
+    funcao f_maior(num, contador:inteiro): inteiro
+       inicio
+          se(contador = 1)entao
+             maior <- num
+          senao
+             se(num >= maior)entao
+                maior <- num
+             fimse
+          fimse
+          retorne maior
+       fimfuncao
+       
+    funcao f_menor(num, contador:inteiro): inteiro
+       inicio
+          se(contador = 1)entao
+             menor <- num
+          senao
+             se(num <= menor)entao
+                menor <- num
+             fimse
+          fimse
+          retorne menor
+       fimfuncao
+
+   ////////////////////////////////////
+
+   para cont <- 1 ate 5 faca
+      escreva("Informe o número: ")
+      leia(numero)
+      maior <- f_maior(numero, cont)
+      menor <- f_menor(numero, cont)
+   fimpara
+   escreval("O maior é: ", maior)
+   escreval("O menor é: ", menor)
+
+fimalgoritmo
+
+======================================
+
+algoritmo "funcao"
+
+var
+   nota1, nota2, nota3:real
+   media, media_f:real
+   tipo_media:caractere
+inicio
+
+    funcao calcula_media(n1, n2, n3:real; tipo:caractere): real
+       inicio
+          se(tipo = "A")entao
+             media_f <- (n1+n2+n3)/3
+          senao
+             media_f <- (n1*5 + n2*3 + n3*2)/(5+3+2)
+          fimse
+          retorne media_f
+       fimfuncao
+
+
+   ////////////////////////////////////
+
+   escreva("Informe a nota 1: ")
+   leia(nota1)
+   escreva("Informe a nota 2: ")
+   leia(nota2)
+   escreva("Informe a nota 3: ")
+   leia(nota3)
+   
+   escreval("Informe o tipo da média ")
+   escreva("A - Aritmética ")
+   escreva("P - Ponderada :")
+   leia(tipo_media)
+   
+   media <- calcula_media(nota1, nota2, nota3, tipo_media)
+
+   escreval("A média do aluno é: ", media)
+
+fimalgoritmo
